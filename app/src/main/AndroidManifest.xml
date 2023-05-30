@@ -18,7 +18,7 @@
             android:theme="@style/Theme.AndroidProject.NoActionBar">
 
         </activity>
-        <activity android:name=".Activity.SecondActivity"/>
+        <activity android:name=".Activity.SplashActivity"/>
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />

@@ -30,17 +30,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.splash_screen);
-//        code for splash screen
-        handler=new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent intent=new Intent(MainActivity.this,SecondActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        },3000);
+//        setContentView(R.layout.ac);
 
 //        code for navigation bar
         binding = ActivityMainBinding.inflate(getLayoutInflater());
