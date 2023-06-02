@@ -30,7 +30,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
+        android:inputType="text"
         android:layout_marginLeft="@dimen/form_margin"
         android:layout_marginRight="@dimen/form_margin"
         android:layout_below="@+id/txt_name"
