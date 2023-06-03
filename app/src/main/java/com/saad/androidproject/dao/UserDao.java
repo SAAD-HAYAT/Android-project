@@ -13,7 +13,10 @@ public interface UserDao {
 
         @Query("Select * from UserEntity")
         List<UserEntity> getAll();
-
+        @Query("Select COUNT(*) from UserEntity")
+        int getUserCount();
+        @Query("Select user_password from UserEntity where user_name LIKE :name")
+        UserEntity findByName(String name);
         @Insert
         void insertUser(UserEntity userEntity);
 

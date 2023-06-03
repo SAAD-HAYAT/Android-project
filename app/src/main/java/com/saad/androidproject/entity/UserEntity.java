@@ -20,4 +20,5 @@ public class UserEntity {
     public String userEmail;
     @ColumnInfo(name="user_password")
     public String userPassword;
+
 }

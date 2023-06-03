@@ -26,6 +26,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".forms.Signup"
+            android:exported="true"
+            android:theme="@style/Theme.AndroidProject.NoActionBar">
+        </activity>
+        <activity android:name=".forms.LoginForm"
+            android:exported="true"
+            android:theme="@style/Theme.AndroidProject.NoActionBar">
+        </activity>
     </application>
     <dist:module dist:instant="true"/>
 </manifest>

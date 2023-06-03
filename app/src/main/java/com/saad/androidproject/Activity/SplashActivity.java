@@ -8,6 +8,7 @@ import android.view.WindowManager;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.saad.androidproject.R;
+import com.saad.androidproject.forms.Signup;
 
 public class SplashActivity extends AppCompatActivity {
     @Override
@@ -19,11 +20,11 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 // This method will be executed once the timer is over
-                Intent i = new Intent(SplashActivity.this, MainActivity.class);
+                Intent i = new Intent(SplashActivity.this, Signup.class);
                 startActivity(i);
                 finish();
             }
-        }, 5000);
+        }, 4000);
 
     }
 }
