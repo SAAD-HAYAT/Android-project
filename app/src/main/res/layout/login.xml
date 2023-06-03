@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/Login_background"
-    tools:context=".LoginForm">
+    android:background="@drawable/login_background"
+    tools:context=".forms.LoginForm">
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
@@ -28,6 +28,7 @@
         android:textSize="@dimen/field_size"
         />
     <EditText
+        android:id="@+id/loginUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
@@ -48,6 +49,7 @@
         android:textSize="@dimen/field_size"
         />
     <EditText
+        android:id="@+id/loginPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
@@ -63,7 +65,7 @@
         android:layout_height="wrap_content"
         android:text="@string/title_login"
         android:textAllCaps="true"
-        android:id="@+id/txtbtn"
+        android:id="@+id/loginbtn"
         android:layout_below="@+id/txtpass"
         android:layout_marginRight="@dimen/form_margin"
         android:layout_marginLeft="@dimen/form_margin"

@@ -9,6 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#4E4D4D</color>
     <color name="button_color">#AD5BCF</color>
-    <color name="splash_gradient1">#E7BCBC</color>
-    <color name="splash_gradient2">#B7DFF4</color>
+    <color name="splash_gradient1">#F88686</color>
+    <color name="splash_gradient2">#ACD8EF</color>
 </resources>

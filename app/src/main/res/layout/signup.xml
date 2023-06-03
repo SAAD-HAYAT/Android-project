@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/Signup_background"
-    tools:context=".Signup"
+    android:background="@drawable/signup_background"
+    tools:context=".forms.Signup"
     android:orientation="vertical">
     <TextView
         android:layout_width="match_parent"
@@ -28,6 +28,7 @@
         />
 
     <EditText
+        android:id="@+id/usenameTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/form_margin"
@@ -50,6 +51,7 @@
         />
 
     <EditText
+        android:id="@+id/emailTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/form_margin"
@@ -72,6 +74,7 @@
         android:textSize="@dimen/field_size"
         />
     <EditText
+        android:id="@+id/passTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
@@ -86,7 +89,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Retype Password"
+        android:text="Confirm Password"
         android:id="@+id/txt4"
         android:layout_below="@+id/txt3"
         android:layout_marginLeft="@dimen/form_margin"
@@ -94,6 +97,7 @@
         android:textSize="@dimen/field_size"
         />
     <EditText
+        android:id="@+id/confirmPassTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
