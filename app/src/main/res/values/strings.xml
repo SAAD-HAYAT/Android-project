@@ -9,6 +9,7 @@
     <string name="username">Username</string>
     <string name="title_login">Login</string>
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="users_list">Users</string>
+    <string name="create_users">Create User</string>
+    <string name="logout">Logout</string>
 </resources>
