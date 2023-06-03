@@ -10,4 +10,5 @@
     <dimen name="field_size">20sp</dimen>
     <dimen name="form_margin">50dp</dimen>
     <dimen name="form_field_spacing_bottom">20dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
 </resources>
