@@ -59,6 +59,20 @@
         android:background="@drawable/edittext_bottom_line"
         android:layout_marginBottom="@dimen/form_field_spacing_bottom"
         />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/form_margin"
+        android:id="@+id/checkbox"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Keep me signed In"
+        android:id="@+id/txtsignedin"
+        android:layout_marginLeft="@dimen/form_margin"
+        android:layout_marginRight="@dimen/form_margin"
+        android:textSize="@dimen/field_size"/>
 
     <Button
         android:layout_width="match_parent"
