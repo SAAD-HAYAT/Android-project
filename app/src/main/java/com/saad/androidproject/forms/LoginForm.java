@@ -35,6 +35,8 @@ public class LoginForm extends Activity {
         loginBtn = findViewById(R.id.loginbtn);
         usernameTxt = findViewById(R.id.loginUsername);
         passwordTxt = findViewById(R.id.loginPassword);
+        keepSignedInCheckBox = findViewById(R.id.checkbox);
+        sharedPreferences = getSharedPreferences("login_prefs", MODE_PRIVATE);
         String savedUsername = sharedPreferences.getString("username", "");
         String savedPassword = sharedPreferences.getString("password", "");
 

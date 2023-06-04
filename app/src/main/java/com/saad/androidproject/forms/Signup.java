@@ -23,7 +23,7 @@ import java.time.ZoneId;
 
 public class Signup extends Activity {
 
-    SharedPreferences sharedPreferences;
+    private SharedPreferences sharedPreferences;
     Button signInBtn;
     EditText usernameTxt;
     EditText emailTxt;
