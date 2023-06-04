@@ -20,17 +20,22 @@ import com.saad.androidproject.entity.UserEntity;
 import java.time.ZoneId;
 
 public class Signup extends Activity {
-    Button signInBtn = findViewById(R.id.txtbtn);
-    EditText usernameTxt = findViewById(R.id.usenameTxt);
-    EditText emailTxt = findViewById(R.id.emailTxt);
-    EditText passwordTxt = findViewById(R.id.passTxt);
-    EditText confirmPasswordTxt = findViewById(R.id.confirmPassTxt);
+    Button signInBtn;
+    EditText usernameTxt;
+    EditText emailTxt;
+    EditText passwordTxt;
+    EditText confirmPasswordTxt;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup);
-
-        signInBtn.setOnClickListener(new View.OnClickListener(){
+        signInBtn = findViewById(R.id.txtbtn);
+        usernameTxt = findViewById(R.id.usenameTxt);
+        emailTxt = findViewById(R.id.emailTxt);
+        passwordTxt = findViewById(R.id.passTxt);
+        confirmPasswordTxt = findViewById(R.id.confirmPassTxt);
+        signInBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
@@ -38,18 +43,17 @@ public class Signup extends Activity {
                 String username = usernameTxt.getText().toString();
                 String email = emailTxt.getText().toString();
                 String confirmPassword = confirmPasswordTxt.getText().toString();
-                if(password.equals(confirmPassword)){
+                if (password.equals(confirmPassword)) {
                     AppDatabase db = Room.databaseBuilder(getApplicationContext(),
                             AppDatabase.class, "app-database").allowMainThreadQueries().build();
                     UserDao userDao = db.userDao();
-                     int count = userDao.getUserCount();
-                     count++;
-                    UserEntity user = new UserEntity(count,username,email,password);
+                    int count = userDao.getUserCount();
+                    count++;
+                    UserEntity user = new UserEntity(count, username, email, password);
                     userDao.insertUser(user);
                     Intent i = new Intent(Signup.this, LoginForm.class);
                     startActivity(i);
-                }
-                else {
+                } else {
                     passwordTxt.setError("password does not match");
                 }
             }

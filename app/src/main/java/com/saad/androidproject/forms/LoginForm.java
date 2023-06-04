@@ -16,12 +16,16 @@ import com.saad.androidproject.db.AppDatabase;
 import com.saad.androidproject.entity.UserEntity;
 
 public class LoginForm extends Activity {
-    Button loginBtn = findViewById(R.id.loginbtn);
-    EditText usernameTxt = findViewById(R.id.loginUsername);
-        EditText passwordTxt = findViewById(R.id.loginPassword);
+    Button loginBtn;
+    EditText usernameTxt;
+    EditText passwordTxt;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
+        loginBtn = findViewById(R.id.loginbtn);
+        usernameTxt = findViewById(R.id.loginUsername);
+        passwordTxt = findViewById(R.id.loginPassword);
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -32,11 +36,10 @@ public class LoginForm extends Activity {
                 UserDao userDao = db.userDao();
                 UserEntity pass = userDao.findByName(username);
                 String orignalPassword = pass.userPassword;
-                if(password.equals(orignalPassword)){
+                if (password.equals(orignalPassword)) {
                     Intent i = new Intent(LoginForm.this, MainActivity.class);
                     startActivity(i);
-                }
-                else{
+                } else {
                     passwordTxt.setError("invalid password");
                 }
 
