@@ -18,8 +18,8 @@
         tools:layout="@layout/fragment_slideshow" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.saad.androidproject.ui.gallery.GalleryFragment"
+        android:id="@+id/nav_create_user"
+        android:name="com.saad.androidproject.forms.UserForm"
         android:label="@string/create_users"
         tools:layout="@layout/fragment_gallery" />
 

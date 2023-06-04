@@ -15,7 +15,7 @@ public interface UserDao {
         List<UserEntity> getAll();
         @Query("Select COUNT(*) from UserEntity")
         int getUserCount();
-        @Query("Select user_password from UserEntity where user_name LIKE :name")
+        @Query("Select * from UserEntity where user_name LIKE :name")
         UserEntity findByName(String name);
         @Insert
         void insertUser(UserEntity userEntity);
