@@ -1,13 +1,13 @@
 package com.saad.androidproject.retrofit;
 
-import android.telecom.Call;
-
-import androidx.room.Query;
 
 //import retrofit2.Call;
+
+import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Query;
 //import retrofit2.http.Query;
 
 public interface APIInterface {
