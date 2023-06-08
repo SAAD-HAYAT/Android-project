@@ -39,11 +39,14 @@ public class LoginForm extends Activity {
         sharedPreferences = getSharedPreferences("login_prefs", MODE_PRIVATE);
         String savedUsername = sharedPreferences.getString("username", "");
         String savedPassword = sharedPreferences.getString("password", "");
-
+        keepSignedInCheckBox.isLongClickable();
         // Autofill the EditText fields with saved username and password
         if (!savedUsername.isEmpty() && !savedPassword.isEmpty()) {
-            usernameTxt.setText(savedUsername);
-            passwordTxt.setText(savedPassword);
+//            usernameTxt.setText(savedUsername);
+//            passwordTxt.setText(savedPassword);
+            Intent i = new Intent(LoginForm.this, MainActivity.class);
+            startActivity(i);
+
         }
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override

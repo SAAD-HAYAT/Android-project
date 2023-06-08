@@ -1,11 +1,14 @@
 package com.saad.androidproject.ui.userlist;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.saad.androidproject.databinding.FragmentUserListBinding;
 import com.saad.androidproject.retrofit.UserList;
 
@@ -18,9 +21,11 @@ import java.util.List;
 public class MyUsersListRecyclerViewAdapter extends RecyclerView.Adapter<MyUsersListRecyclerViewAdapter.ViewHolder> {
 
     private final List<UserList.Datum> mValues;
+    Context context;
 
-    public MyUsersListRecyclerViewAdapter(List<UserList.Datum> items) {
+    public MyUsersListRecyclerViewAdapter(List<UserList.Datum> items,Context context) {
         mValues = items;
+        this.context=context;
     }
 
     @Override
@@ -35,6 +40,7 @@ public class MyUsersListRecyclerViewAdapter extends RecyclerView.Adapter<MyUsers
         holder.mIdView.setText(String.valueOf(mValues.get(position).id));
         holder.firstNameView.setText(mValues.get(position).first_name);
         holder.lastNameView.setText(mValues.get(position).last_name);
+        Glide.with(context).load(mValues.get(position).avatar).into(holder.imageView);
 //        holder.avatarView.setText(mValues.get(position).avatar);
 
     }
@@ -48,14 +54,14 @@ public class MyUsersListRecyclerViewAdapter extends RecyclerView.Adapter<MyUsers
         public final TextView mIdView;
         public final TextView firstNameView;
         public final TextView lastNameView;
-//        public final TextView avatarView;
+        public final ImageView imageView;
 
         public ViewHolder(FragmentUserListBinding binding) {
             super(binding.getRoot());
             mIdView = binding.id;
             firstNameView = binding.firstName;
             lastNameView = binding.lastName;
-//            avatarView = binding.avatar;
+            imageView = binding.imgView;
         }
 
 

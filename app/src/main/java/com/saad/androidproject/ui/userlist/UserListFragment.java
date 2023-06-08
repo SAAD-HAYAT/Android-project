@@ -28,7 +28,7 @@ public class UserListFragment extends Fragment {
     // TODO: Customize parameter argument names
     private static final String ARG_COLUMN_COUNT = "column-count";
     // TODO: Customize parameters
-    private int mColumnCount = 3;
+    private int mColumnCount =1    ;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -79,7 +79,7 @@ public class UserListFragment extends Fragment {
             call.enqueue(new Callback<UserList>() {
                 @Override
                 public void onResponse(Call<UserList> call, Response<UserList> response) {
-                    recyclerView.setAdapter(new MyUsersListRecyclerViewAdapter(response.body().data));
+                    recyclerView.setAdapter(new MyUsersListRecyclerViewAdapter(response.body().data,getActivity()));
                 }
 
                 @Override

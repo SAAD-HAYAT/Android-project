@@ -22,10 +22,7 @@
         <activity android:name=".Activity.SplashActivity"
             android:exported="true"
             android:theme="@style/Theme.AndroidProject.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <activity android:name=".forms.Signup"
             android:exported="true"
@@ -34,6 +31,10 @@
         <activity android:name=".forms.LoginForm"
             android:exported="true"
             android:theme="@style/Theme.AndroidProject.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
     <dist:module dist:instant="true"/>
