@@ -1,6 +1,8 @@
 package com.saad.androidproject.ui;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -18,6 +20,9 @@ import com.saad.androidproject.forms.LoginForm;
  * create an instance of this fragment.
  */
 public class LogoutFragment extends Fragment {
+
+    SharedPreferences sharedPreferences;
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -57,6 +62,8 @@ public class LogoutFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        sharedPreferences = getActivity().getSharedPreferences("login_prefs", Context.MODE_PRIVATE);
+        sharedPreferences.edit().clear().commit();
         Intent intent = new Intent(getActivity(), LoginForm.class);
         startActivity(intent);
     }
